@@ -15,8 +15,8 @@
 
 float joint[5];
 float current_t = 0.0;
-float theta_init[5] = {169.0*PI/180.0, -65.0*PI/180.0, 146.0*PI/180.0, -102.5*PI/180.0, 165.0*PI/180.0};
-float theta_lim[5] = {-169.0*PI/180.0, 90.0*PI/180.0, -150.0*PI/180.0, 102.5*PI/180.0, -165.0*PI/180.0};
+float theta_init[5] = {169.0, -65.0, 146.0, -102.5, 165.0};
+float theta_lim[5] = {-169.0, 90.0, -150.0, 102.5, -165.0};
 int period_joint[5] = {8, 5, 7, 6, 5};
 
 using namespace std;
