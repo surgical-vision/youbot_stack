@@ -196,7 +196,7 @@ void YouBotManipulator::calibrateManipulator(const bool forceCalibration) {
         finished[i] = true;
       }
     }
-
+int test_cc = 0;
     //monitor the current to find end stop 
     while (!(finished[0] && finished[1] && finished[2] && finished[3] && finished[4])) {
       for (unsigned int i = 0; i < ARMJOINTS; i++) {
@@ -216,8 +216,14 @@ void YouBotManipulator::calibrateManipulator(const bool forceCalibration) {
             ethercatMaster.receiveProcessData();
           }
           finished[i] = true;
+	if (finished[i])
+		cout << "Joint "  << i << " = true" << endl;
+	else
+		cout << "Joint "  << i << " = false" << endl;
         }
       }
+	test_cc++;
+	cout << "Trial number : " << test_cc << endl;
       SLEEP_MILLISEC(1);
     }
 
