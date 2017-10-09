@@ -1,6 +1,8 @@
 
 # youbot_stack
 Collection of packages to run the youbot arm in simulation and in hardware for course COMPGX01
+
+
 Dependencies:
 `sudo apt install ros-kinetic-controller-manager ros-kinetic-joint-state-controller`
 
