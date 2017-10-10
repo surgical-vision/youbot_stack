@@ -15,10 +15,11 @@ To run the simulator:
 1. run `roslaunch youbot_simulator youbot_sim.launch gui:=true`
 The gui true tag brings up the gazebo client if you don't want the gazebo client put false.
 
-To run the youbot_arm:
-1. Type in these commands to give permission for non-root execution. (You have to run these everytime the node has changed.)
-1.1 `cd devel/lib/my_pkg`     # cd to the directory with your node
-1.2 `sudo chown root:root my_node` # change ownship to root
-1.3 `sudo chmod a+rx my_node`      # set as executable by all
-1.4 `sudo chmod u+s my_node `      # set the setuid bit
-2. run `roslaunch youbot_joint_control youbot_arm.launch`
+To  give permission for non-root execution for the robot. (You have to run these everytime the node has changed.)
+1. `cd devel/lib/my_pkg`     # cd to the directory with your node
+2. `sudo chown root:root my_node` # change ownship to root
+3. `sudo chmod a+rx my_node`      # set as executable by all
+4. `sudo chmod u+s my_node `      # set the setuid bit
+
+To run the arm:
+1. run `roslaunch youbot_joint_control youbot_arm.launch`
