@@ -17,8 +17,8 @@ The gui true tag brings up the gazebo client if you don't want the gazebo client
 
 To run the youbot_arm:
 1. Type in these commands to give permission for non-root execution. (You have to run these everytime the node has changed.)
-cd devel/lib/my_pkg     # cd to the directory with your node
-sudo chown root:root my_node # change ownship to root
-sudo chmod a+rx my_node      # set as executable by all
-sudo chmod u+s my_node       # set the setuid bit
+`cd devel/lib/my_pkg`     # cd to the directory with your node
+`sudo chown root:root my_node` # change ownship to root
+`sudo chmod a+rx my_node`      # set as executable by all
+`sudo chmod u+s my_node `      # set the setuid bit
 2. run `roslaunch youbot_joint_control youbot_arm.launch`
