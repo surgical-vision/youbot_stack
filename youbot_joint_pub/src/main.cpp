@@ -22,8 +22,7 @@ using namespace std;
 void timer_callBack(const ros::TimerEvent&)
 {
 	for (int i = 0; i < 5; i++)
-		if (i != 2)
-			joint[i] = 0.5*(theta_max[i] - theta_min[i])*cos(2*PI*current_t/period_joint[i]) + 0.5*(theta_max[i] + theta_min[i]);
+		joint[i] = 0.5*(theta_max[i] - theta_min[i])*cos(2*PI*current_t/period_joint[i]) + 0.5*(theta_max[i] + theta_min[i]);
 	if (current_t < 100*PI)
 		current_t = current_t + 0.01;
 	else
