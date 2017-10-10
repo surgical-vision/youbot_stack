@@ -18,4 +18,5 @@
   <include file="$(find youbot_simulator)/launch/youbot_controller.launch">
     <arg name="trajectory_interface" value="$(arg trajectory_interface)"/>
   </include>
+
 </launch>

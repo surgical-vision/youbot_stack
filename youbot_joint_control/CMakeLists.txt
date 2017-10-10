@@ -4,7 +4,8 @@ project(youbot_joint_control)
 find_package(catkin REQUIRED COMPONENTS
 	roscpp
 	std_msgs
-	youbot_driver
+	trajectory_msgs
+	sensor_msgs
 )
 
 include_directories(

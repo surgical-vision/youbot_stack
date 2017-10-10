@@ -3,7 +3,7 @@ project(youbot_joint_pub)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  std_msgs
+  trajectory_msgs
 )
 
 
@@ -16,7 +16,6 @@ include_directories(
 catkin_package(
 	CATKIN_DEPENDS
 	roscpp
-	std_msgs
 )
 
 link_directories(

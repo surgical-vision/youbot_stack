@@ -7,9 +7,8 @@
 #include <stdint.h>
 
 #include "ros/ros.h"
-#include "std_msgs/Float32MultiArray.h"
-#include "std_msgs/MultiArrayLayout.h"
-#include "std_msgs/MultiArrayDimension.h"
+#include <trajectory_msgs/JointTrajectoryPoint.h>
+#include <sensor_msgs/JointState.h>
 
 #include "youbot/YouBotManipulator.hpp"
 
@@ -18,9 +17,9 @@
 
 using namespace std;
 
-float theta_init[5] = {169.0*PI/180.0, -65.0*PI/180.0, 146.0*PI/180.0, -102.5*PI/180.0, 165.0*PI/180.0};
-float max_lim_youbot[5] = {5.84013, 2.6178, -0.015709, 3.4291, 5.6414};
-float min_lim_youbot[5] = {0.01007, 0.01007, -5.0264, 0.022124, 0.11062};		
+double theta_init[5] = {169.0*PI/180.0, -65.0*PI/180.0, 146.0*PI/180.0, -102.5*PI/180.0, 165.0*PI/180.0};
+double max_lim_youbot[5] = {5.84013, 2.6178, -0.015709, 3.4291, 5.6414};
+double min_lim_youbot[5] = {0.01007, 0.01007, -5.0264, 0.022124, 0.11062};		
 
 
 class YouBotNode
@@ -62,22 +61,31 @@ class YouBotNode
 				cout << "ARM Exception: " << ex.what() << endl;
 			}
 
-			JointPublisher   = nhYoubot_.advertise<std_msgs::Float32MultiArray>("JointData", 1);
-			JointSubscriber  = nhYoubot_.subscribe<std_msgs::Float32MultiArray>("JointCMD", 1, boost::bind(&YouBotNode::MoveArm, this, _1, youBotArm));
-			std_msgs::Float32MultiArray JointData;	
+			JointPublisher   = nhYoubot_.advertise<sensor_msgs::JointState>("/arm/joint_states", 1);
+			JointSubscriber  = nhYoubot_.subscribe<trajectory_msgs::JointTrajectoryPoint>("/arm/cmd_joint_traj", 1, boost::bind(&YouBotNode::MoveArm, this, _1, youBotArm));
+			sensor_msgs::JointState JointData;
+			
+			JointData.name.push_back("arm_joint_1");
+			JointData.name.push_back("arm_joint_2");
+			JointData.name.push_back("arm_joint_3");
+			JointData.name.push_back("arm_joint_4");
+			JointData.name.push_back("arm_joint_5");
 
 			while (nhYoubot_.ok())
 			{
-				JointData.data.clear();
+				JointData.position.clear();
+				JointData.velocity.clear();
+				
+
 				for (int i = 0; i < 5; i++)
 				{
 					youBotArm->getArmJoint(i + 1).getData(sensedAngle);
 					youBotArm->getArmJoint(i + 1).getData(sensedVelocity);
 					if ((i == 0) || (i == 4))
-						JointData.data.push_back(theta_init[i] - sensedAngle.angle.value());
+						JointData.position.push_back(theta_init[i] - sensedAngle.angle.value());
 					else
-						JointData.data.push_back(theta_init[i] + sensedAngle.angle.value());
-					JointData.data.push_back(sensedVelocity.angularVelocity.value());
+						JointData.position.push_back(theta_init[i] + sensedAngle.angle.value());
+					JointData.velocity.push_back(sensedVelocity.angularVelocity.value());
 				}
 
 				JointPublisher.publish(JointData);
@@ -89,13 +97,13 @@ class YouBotNode
 			return 0;
 		}
 
-		void MoveArm(const std_msgs::Float32MultiArray::ConstPtr &joint_cmd, youbot::YouBotManipulator *youBotArm)
+		void MoveArm(const trajectory_msgs::JointTrajectoryPoint::ConstPtr &joint_cmd, youbot::YouBotManipulator *youBotArm)
 		{
 			int cc = 0;
 			float incoming_joint;
 			youbot::JointAngleSetpoint setAngle;
 
-			for (std::vector<float>::const_iterator it = joint_cmd->data.begin(); it != joint_cmd->data.end(); ++it)
+			for (std::vector<double>::const_iterator it = joint_cmd->positions.begin(); it != joint_cmd->positions.end(); ++it)
 			{
 				incoming_joint = *it;
 				//Apply joint offset
