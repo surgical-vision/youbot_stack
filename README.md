@@ -3,7 +3,7 @@ Collection of packages to run the youbot arm in simulation and in hardware for c
 
 
 Dependencies:
-`sudo apt install ros-kinetic-controller-manager ros-kinetic-joint-state-controller ros-kinetic-effort-controllers`
+`sudo apt install ros-kinetic-controller-manager ros-kinetic-joint-state-controller ros-kinetic-effort-controllers ros-kinetic-gazebo-ros-control`
 
 Build:
 1. Clone repo into catkin workspace (eg. catkin_ws/src)
