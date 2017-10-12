@@ -3,21 +3,20 @@ project(youbot_joint_control)
 
 find_package(catkin REQUIRED COMPONENTS
 	roscpp
-	std_msgs
 	trajectory_msgs
 	sensor_msgs
 )
 
+find_package(youbot_driver REQUIRED)
+
 include_directories(
-	INCLUDE_DIRS
-	${PROJECT_SOURCE_DIR}/include
 	${catkin_INCLUDE_DIRS}
+	${youbot_driver_DIRS}
 )
 
 catkin_package(
 	CATKIN_DEPENDS
 	roscpp
-	std_msgs
 )
 
 link_directories(
@@ -34,5 +33,5 @@ add_executable(youbot_joint_control
 
 target_link_libraries(youbot_joint_control
 	${catkin_LIBRARIES}
-	${PROJECT_SOURCE_DIR}/lib/libYouBotDriver.so
+	${youbot_driver_LIBRARIES}
 )
