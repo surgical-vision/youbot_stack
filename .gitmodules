@@ -1,6 +1,3 @@
 [submodule "youbot_description"]
 	path = youbot_description
 	url = https://github.com/surgical-vision/youbot_description.git
-[submodule "youbot_driver"]
-	path = youbot_driver
-	url = https://github.com/surgical-vision/youbot_driver.git
