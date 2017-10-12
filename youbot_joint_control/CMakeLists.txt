@@ -7,11 +7,10 @@ find_package(catkin REQUIRED COMPONENTS
 	sensor_msgs
 )
 
-find_package(youbot_driver REQUIRED)
-
 include_directories(
 	${catkin_INCLUDE_DIRS}
-	${youbot_driver_DIRS}
+	${youbot_driver_SOURCE_DIR}
+	${youbot_driver_SOURCE_DIR}/soem/src
 )
 
 catkin_package(
@@ -33,5 +32,5 @@ add_executable(youbot_joint_control
 
 target_link_libraries(youbot_joint_control
 	${catkin_LIBRARIES}
-	${youbot_driver_LIBRARIES}
+	${youbot_driver_SOURCE_DIR}/lib/libYouBotDriver.so
 )
