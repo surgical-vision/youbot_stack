@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-	
-	<node name="youbot_arm" pkg="youbot_joint_control" type="youbot_joint_control"/>
-	<node name="youbot_cmd" pkg="youbot_joint_pub" type="youbot_joint_pub"/>
-
-</launch>
