@@ -5,18 +5,20 @@ find_package(catkin REQUIRED COMPONENTS
 	roscpp
 	trajectory_msgs
 	sensor_msgs
+	youbot_driver
+)
+
+catkin_package(
+#	INCLUDE_DIRS
+#	LIBRARIES ${PROJECT_NAME}
+	CATKIN_DEPENDS roscpp trajectory_msgs sensor_msgs youbot_driver
+#	DEPENDS
 )
 
 include_directories(
 	${catkin_INCLUDE_DIRS}
-	${youbot_driver_SOURCE_DIR}
-	${youbot_driver_SOURCE_DIR}/soem/src
 )
 
-catkin_package(
-	CATKIN_DEPENDS
-	roscpp
-)
 
 link_directories(
 	${catkin_LIBRARY_DIRS}
