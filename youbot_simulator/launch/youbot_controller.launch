@@ -4,7 +4,6 @@
 	<!-- Launches the controllers according to the hardware interface selected -->
 	<!-- Everythings is spawned under a namespace with the same name as the robot's. -->
 	<arg name="robot_name" default="arm" />
-	
 
 	<!-- Loads joint controller configurations from YAML file to parameter server -->
 	<rosparam file="$(find youbot_simulator)/config/youbot_control.yaml" command="load" />
