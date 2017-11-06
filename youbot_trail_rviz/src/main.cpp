@@ -17,7 +17,7 @@ int main( int argc, char** argv )
     ros::Rate r(30);
 
     rosbag::Bag bag;
-    bag.open("/home/kpach/catkin_ws/src/youbot_stack/youbot_simulator/bags/data_extra.bag", rosbag::bagmode::Read);
+    bag.open("/home/kpach/catkin_ws/src/youbot_stack/youbot_simulator/bags/data_q4c.bag", rosbag::bagmode::Read);
 
     std::vector<std::string> topics;
     topics.push_back(std::string("target_position"));
@@ -35,8 +35,8 @@ int main( int argc, char** argv )
     points.type = visualization_msgs::Marker::POINTS;
 
     // POINTS markers use x and y scale for width/height respectively
-    points.scale.x = 0.2;
-    points.scale.y = 0.2;
+    points.scale.x = 0.01;
+    points.scale.y = 0.01;
 
     // Points are red
     points.color.r = 1.0f;
