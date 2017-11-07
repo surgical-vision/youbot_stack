@@ -2,54 +2,54 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="youbot_trail_rviz" targetName="topic_tools_generate_messages_eus" />
-      <config projectName="youbot_trail_rviz" targetName="gtest" />
-      <config projectName="youbot_trail_rviz" targetName="clean_test_results" />
-      <config projectName="youbot_trail_rviz" targetName="roscpp_generate_messages_eus" />
-      <config projectName="youbot_trail_rviz" targetName="rosgraph_msgs_generate_messages_eus" />
-      <config projectName="youbot_trail_rviz" targetName="rosgraph_msgs_generate_messages_py" />
-      <config projectName="youbot_trail_rviz" targetName="sensor_msgs_generate_messages_py" />
-      <config projectName="youbot_trail_rviz" targetName="geometry_msgs_generate_messages_cpp" />
-      <config projectName="youbot_trail_rviz" targetName="roscpp_generate_messages_py" />
-      <config projectName="youbot_trail_rviz" targetName="std_srvs_generate_messages_eus" />
-      <config projectName="youbot_trail_rviz" targetName="roscpp_generate_messages_nodejs" />
-      <config projectName="youbot_trail_rviz" targetName="std_srvs_generate_messages_lisp" />
-      <config projectName="youbot_trail_rviz" targetName="sensor_msgs_generate_messages_nodejs" />
-      <config projectName="youbot_trail_rviz" targetName="std_msgs_generate_messages_eus" />
-      <config projectName="youbot_trail_rviz" targetName="visualization_msgs_generate_messages_lisp" />
-      <config projectName="youbot_trail_rviz" targetName="sensor_msgs_generate_messages_cpp" />
-      <config projectName="youbot_trail_rviz" targetName="roscpp_generate_messages_lisp" />
-      <config projectName="youbot_trail_rviz" targetName="visualization_msgs_generate_messages_eus" />
-      <config projectName="youbot_trail_rviz" targetName="std_msgs_generate_messages_lisp" />
-      <config projectName="youbot_trail_rviz" targetName="topic_tools_generate_messages_cpp" />
-      <config projectName="youbot_trail_rviz" targetName="roscpp_generate_messages_cpp" />
-      <config projectName="youbot_trail_rviz" targetName="rosgraph_msgs_generate_messages_cpp" />
-      <config projectName="youbot_trail_rviz" targetName="visualization_msgs_generate_messages_py" />
-      <config projectName="youbot_trail_rviz" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="youbot_trail_rviz" targetName="sensor_msgs_generate_messages_lisp" />
       <config projectName="youbot_trail_rviz" targetName="topic_tools_generate_messages_nodejs" />
-      <config projectName="youbot_trail_rviz" targetName="std_srvs_generate_messages_py" />
-      <config projectName="youbot_trail_rviz" targetName="geometry_msgs_generate_messages_eus" />
-      <config projectName="youbot_trail_rviz" targetName="std_msgs_generate_messages_py" />
-      <config projectName="youbot_trail_rviz" targetName="rosgraph_msgs_generate_messages_nodejs" />
-      <config projectName="youbot_trail_rviz" targetName="visualization_msgs_generate_messages_nodejs" />
-      <config projectName="youbot_trail_rviz" targetName="youbot_trail_rviz_node" />
-      <config projectName="youbot_trail_rviz" targetName="std_srvs_generate_messages_cpp" />
-      <config projectName="youbot_trail_rviz" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="youbot_trail_rviz" targetName="std_srvs_generate_messages_nodejs" />
-      <config projectName="youbot_trail_rviz" targetName="topic_tools_generate_messages_py" />
-      <config projectName="youbot_trail_rviz" targetName="geometry_msgs_generate_messages_lisp" />
-      <config projectName="youbot_trail_rviz" targetName="run_tests" />
-      <config projectName="youbot_trail_rviz" targetName="std_msgs_generate_messages_cpp" />
-      <config projectName="youbot_trail_rviz" targetName="tests" />
-      <config projectName="youbot_trail_rviz" targetName="sensor_msgs_generate_messages_eus" />
-      <config projectName="youbot_trail_rviz" targetName="geometry_msgs_generate_messages_nodejs" />
-      <config projectName="youbot_trail_rviz" targetName="download_extra_data" />
-      <config projectName="youbot_trail_rviz" targetName="topic_tools_generate_messages_lisp" />
-      <config projectName="youbot_trail_rviz" targetName="doxygen" />
+      <config projectName="youbot_trail_rviz" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="youbot_trail_rviz" targetName="std_msgs_generate_messages_eus" />
       <config projectName="youbot_trail_rviz" targetName="geometry_msgs_generate_messages_py" />
-      <config projectName="youbot_trail_rviz" targetName="visualization_msgs_generate_messages_cpp" />
+      <config projectName="youbot_trail_rviz" targetName="doxygen" />
+      <config projectName="youbot_trail_rviz" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="youbot_trail_rviz" targetName="youbot_trail_rviz_node" />
+      <config projectName="youbot_trail_rviz" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="youbot_trail_rviz" targetName="sensor_msgs_generate_messages_cpp" />
+      <config projectName="youbot_trail_rviz" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="youbot_trail_rviz" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="youbot_trail_rviz" targetName="sensor_msgs_generate_messages_lisp" />
+      <config projectName="youbot_trail_rviz" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="youbot_trail_rviz" targetName="visualization_msgs_generate_messages_nodejs" />
+      <config projectName="youbot_trail_rviz" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="youbot_trail_rviz" targetName="visualization_msgs_generate_messages_eus" />
+      <config projectName="youbot_trail_rviz" targetName="visualization_msgs_generate_messages_lisp" />
+      <config projectName="youbot_trail_rviz" targetName="topic_tools_generate_messages_cpp" />
+      <config projectName="youbot_trail_rviz" targetName="run_tests" />
+      <config projectName="youbot_trail_rviz" targetName="roscpp_generate_messages_eus" />
+      <config projectName="youbot_trail_rviz" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="youbot_trail_rviz" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="youbot_trail_rviz" targetName="roscpp_generate_messages_py" />
+      <config projectName="youbot_trail_rviz" targetName="clean_test_results" />
+      <config projectName="youbot_trail_rviz" targetName="topic_tools_generate_messages_eus" />
+      <config projectName="youbot_trail_rviz" targetName="sensor_msgs_generate_messages_nodejs" />
+      <config projectName="youbot_trail_rviz" targetName="std_srvs_generate_messages_py" />
+      <config projectName="youbot_trail_rviz" targetName="visualization_msgs_generate_messages_py" />
+      <config projectName="youbot_trail_rviz" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="youbot_trail_rviz" targetName="std_srvs_generate_messages_cpp" />
+      <config projectName="youbot_trail_rviz" targetName="std_srvs_generate_messages_eus" />
+      <config projectName="youbot_trail_rviz" targetName="std_msgs_generate_messages_py" />
+      <config projectName="youbot_trail_rviz" targetName="std_srvs_generate_messages_lisp" />
+      <config projectName="youbot_trail_rviz" targetName="topic_tools_generate_messages_lisp" />
+      <config projectName="youbot_trail_rviz" targetName="geometry_msgs_generate_messages_eus" />
+      <config projectName="youbot_trail_rviz" targetName="gtest" />
       <config projectName="youbot_trail_rviz" targetName="gtest_main" />
+      <config projectName="youbot_trail_rviz" targetName="tests" />
+      <config projectName="youbot_trail_rviz" targetName="roscpp_generate_messages_nodejs" />
+      <config projectName="youbot_trail_rviz" targetName="topic_tools_generate_messages_py" />
+      <config projectName="youbot_trail_rviz" targetName="sensor_msgs_generate_messages_eus" />
+      <config projectName="youbot_trail_rviz" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="youbot_trail_rviz" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="youbot_trail_rviz" targetName="std_msgs_generate_messages_nodejs" />
+      <config projectName="youbot_trail_rviz" targetName="visualization_msgs_generate_messages_cpp" />
+      <config projectName="youbot_trail_rviz" targetName="download_extra_data" />
+      <config projectName="youbot_trail_rviz" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="youbot_trail_rviz" targetName="std_srvs_generate_messages_nodejs" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -68,12 +68,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -82,8 +82,8 @@
       <file leaf-file-name="package.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+            <state relative-caret-position="738">
+              <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -92,8 +92,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+            <state relative-caret-position="-224">
+              <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -118,7 +118,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="233" />
     <option name="y" value="245" />
     <option name="width" value="1855" />
@@ -165,7 +165,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../compgx01_lab/inverse_kinematics" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -390,32 +390,34 @@
       <option name="presentableId" value="Default" />
       <updated>1509983969133</updated>
       <workItem from="1509983970386" duration="3126000" />
+      <workItem from="1510068408460" duration="2151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3126000" />
+    <option name="totallyTimeSpent" value="5277000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="233" y="245" width="1855" height="1056" extended-state="0" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -440,7 +442,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
+        <state relative-caret-position="918">
           <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
           <folding />
         </state>
@@ -448,8 +450,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
+        <state relative-caret-position="486">
           <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-224">
+          <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
