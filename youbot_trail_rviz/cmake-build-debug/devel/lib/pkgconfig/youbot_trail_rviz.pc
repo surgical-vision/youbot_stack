@@ -1,0 +1,8 @@
+prefix=/home/kpach/catkin_ws/src/youbot_stack/youbot_trail_rviz/cmake-build-debug/devel
+
+Name: youbot_trail_rviz
+Description: Description of youbot_trail_rviz
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/kpach/catkin_ws/src/youbot_stack/youbot_trail_rviz/cmake-build-debug/devel/lib 
+Requires: 

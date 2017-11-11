@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: youbot_trail_rviz
+Description: Description of youbot_trail_rviz
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

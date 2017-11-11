@@ -9,6 +9,7 @@ Panels:
         - /RobotModel1
         - /TF1
         - /TF1/Frames1
+        - /Marker1
       Splitter Ratio: 0.5
     Tree Height: 775
   - Class: rviz/Selection
@@ -91,6 +92,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        arm_link_ee:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         base_link:
           Alpha: 1
           Show Axes: false
@@ -133,6 +138,8 @@ Visualization Manager:
           Value: false
         arm_link_5:
           Value: false
+        arm_link_ee:
+          Value: true
         base_link:
           Value: false
         gripper_finger_link_l:
@@ -154,12 +161,22 @@ Visualization Manager:
                 arm_link_3:
                   arm_link_4:
                     arm_link_5:
+                      arm_link_ee:
+                        {}
                       gripper_palm_link:
                         gripper_finger_link_l:
                           {}
                         gripper_finger_link_r:
                           {}
       Update Interval: 0
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: visualization_marker
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
       Value: true
   Enabled: true
   Global Options:
@@ -185,7 +202,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.34723771
+      Distance: 0.550583184
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -200,10 +217,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: -0.00960181467
+      Pitch: 0.38539812
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.57539737
+      Yaw: 0.760398209
     Saved: ~
 Window Geometry:
   Displays:
@@ -221,5 +238,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1855
-  X: 1985
+  X: 65
   Y: 24
