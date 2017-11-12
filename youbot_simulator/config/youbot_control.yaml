@@ -88,7 +88,7 @@
       arm_joint_2: {p: 200,  d: 10, i: 10, i_clamp: 30}
       arm_joint_3: {p: 100,  d: 10, i: 15, i_clamp: 30}
       arm_joint_4: {p: 100,  d: 7, i: 12, i_clamp: 30}
-      arm_joint_5: {p: 100,  d: 3, i: 5, i_clamp: 30}
+      arm_joint_5: {p: 500,  d: 5, i: 5, i_clamp: 30}
 
     constraints:
       goal_time: 0.5                   # Override default
