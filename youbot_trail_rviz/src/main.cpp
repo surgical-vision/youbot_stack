@@ -10,10 +10,6 @@
 #include <boost/foreach.hpp>
 #define foreach BOOST_FOREACH
 
-#define q4a 1
-//#define q4b 1
-//#define q4cd_extra 1
-
 visualization_msgs::Marker robot_trail;
 geometry_msgs::Point gaz_point;
 
@@ -30,11 +26,13 @@ void update_line(const gazebo_msgs::LinkStates::ConstPtr &pos)
 
 int main( int argc, char** argv )
 {
-    ros::init(argc, argv, "trail_nodes");
+    ros::init(argc, argv, "trail_node");
     ros::NodeHandle n;
     ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("/visualization_marker", 10);
     ros::Subscriber traj_sub = n.subscribe<gazebo_msgs::LinkStates>("/gazebo/link_states", 10, update_line);
     ros::Rate r(30);
+
+    int checkpoint_data = atoi(argv[1]);
 
     YoubotKDL youbot;
     youbot.init();
@@ -65,75 +63,89 @@ int main( int argc, char** argv )
 
     robot_trail.scale.x = 0.005;
 
-    // Robot trails are green
-    robot_trail.color.g = 1.0f;
+    // Robot trails are blue
+    robot_trail.color.b = 1.0f;
     robot_trail.color.a = 1.0;
 
     rosbag::Bag bag;
-    bag.open(MY_BAG_PATH, rosbag::bagmode::Read);
+
+    switch (checkpoint_data)
+    {
+        case 1: bag.open(MY_BAG_PATH1, rosbag::bagmode::Read); break;
+        case 2: bag.open(MY_BAG_PATH2, rosbag::bagmode::Read); break;
+        case 3: bag.open(MY_BAG_PATH3, rosbag::bagmode::Read); break;
+        case 4: bag.open(MY_BAG_PATH4, rosbag::bagmode::Read); break;
+        case 5: bag.open(MY_BAG_PATH5, rosbag::bagmode::Read); break;
+        default: ROS_ERROR("Invalid input."); return 0; break;
+    }
 
     std::vector<std::string> topics;
 
-#ifdef q4a
-    topics.push_back(std::string("joint_data"));
-    rosbag::View view(bag, rosbag::TopicQuery(topics));
-
-    foreach(rosbag::MessageInstance const m, view)
+    if (checkpoint_data == 1)
     {
-        sensor_msgs::JointState::ConstPtr s = m.instantiate<sensor_msgs::JointState>();
-        if (s != NULL)
+        topics.push_back(std::string("joint_data"));
+        rosbag::View view(bag, rosbag::TopicQuery(topics));
+
+        foreach(rosbag::MessageInstance const m, view)
         {
+            sensor_msgs::JointState::ConstPtr s = m.instantiate<sensor_msgs::JointState>();
+            if (s != NULL)
+            {
 
-            KDL::JntArray joint;
-            joint.resize(5);
-            for (int i = 0; i < 5; i++)
-               joint.data(i) = s->position.at(i);
+                KDL::JntArray joint;
+                joint.resize(5);
+                for (int i = 0; i < 5; i++)
+                    joint.data(i) = s->position.at(i);
 
-            current_pose = youbot.forward_kinematics(joint, youbot.current_pose);
+                current_pose = youbot.forward_kinematics(joint, youbot.current_pose);
 
-            geometry_msgs::Point p;
-            p.x = current_pose.p.x();
-            p.y = current_pose.p.y();
-            p.z = current_pose.p.z();
-            points.points.push_back(p);
+                geometry_msgs::Point p;
+                p.x = current_pose.p.x();
+                p.y = current_pose.p.y();
+                p.z = current_pose.p.z();
+                points.points.push_back(p);
+            }
+
         }
-
     }
-#elif q4b
-    topics.push_back(std::string("target_tf"));
-    rosbag::View view(bag, rosbag::TopicQuery(topics));
-
-    foreach(rosbag::MessageInstance const m, view)
+    else if (checkpoint_data == 2)
     {
-        geometry_msgs::TransformStamped::ConstPtr s = m.instantiate<geometry_msgs::TransformStamped>();
-        if (s != NULL)
+        topics.push_back(std::string("target_tf"));
+        rosbag::View view(bag, rosbag::TopicQuery(topics));
+
+        foreach(rosbag::MessageInstance const m, view)
         {
-            geometry_msgs::Point p;
-            p.x = s->transform.translation.x;
-            p.y = s->transform.translation.y;
-            p.z = s->transform.translation.z;
-            points.points.push_back(p);
+            geometry_msgs::TransformStamped::ConstPtr s = m.instantiate<geometry_msgs::TransformStamped>();
+            if (s != NULL)
+            {
+                geometry_msgs::Point p;
+                p.x = s->transform.translation.x;
+                p.y = s->transform.translation.y;
+                p.z = s->transform.translation.z;
+                points.points.push_back(p);
+            }
+
         }
-
     }
-#elif q4cd_extra
-    topics.push_back(std::string("target_position"));
-    rosbag::View view(bag, rosbag::TopicQuery(topics));
-
-    foreach(rosbag::MessageInstance const m, view)
+    else
     {
-        geometry_msgs::Point::ConstPtr s = m.instantiate<geometry_msgs::Point>();
-        if (s != NULL)
-        {
-            geometry_msgs::Point p;
-            p.x = s->x;
-            p.y = s->y;
-            p.z = s->z;
-            points.points.push_back(p);
-        }
+        topics.push_back(std::string("target_position"));
+        rosbag::View view(bag, rosbag::TopicQuery(topics));
 
+        foreach(rosbag::MessageInstance const m, view)
+        {
+            geometry_msgs::Point::ConstPtr s = m.instantiate<geometry_msgs::Point>();
+            if (s != NULL)
+            {
+                geometry_msgs::Point p;
+                p.x = s->x;
+                p.y = s->y;
+                p.z = s->z;
+                points.points.push_back(p);
+            }
+
+        }
     }
-#endif
 
     bag.close();
 

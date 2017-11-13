@@ -20,7 +20,11 @@ find_package(catkin REQUIRED COMPONENTS
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
-add_definitions(-DMY_BAG_PATH="${PROJECT_SOURCE_DIR}/bags/data_q4a.bag")
+add_definitions(-DMY_BAG_PATH1="${PROJECT_SOURCE_DIR}/bags/data_q4a.bag")
+add_definitions(-DMY_BAG_PATH2="${PROJECT_SOURCE_DIR}/bags/data_q4b.bag")
+add_definitions(-DMY_BAG_PATH3="${PROJECT_SOURCE_DIR}/bags/data_q4c.bag")
+add_definitions(-DMY_BAG_PATH4="${PROJECT_SOURCE_DIR}/bags/data_q4d.bag")
+add_definitions(-DMY_BAG_PATH5="${PROJECT_SOURCE_DIR}/bags/data_extra.bag")
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
