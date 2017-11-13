@@ -10,7 +10,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "MY_BAG_PATH=\"/home/kpach/catkin_ws/src/youbot_stack/youbot_trail_rviz/bags/data_q4d.bag\""
+  "MY_BAG_PATH=\"/home/kpach/catkin_ws/src/youbot_stack/youbot_trail_rviz/bags/data_q4a.bag\""
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_PACKAGE_NAME=\"youbot_trail_rviz\""
   )

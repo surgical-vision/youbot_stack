@@ -10,9 +10,9 @@
 #include <boost/foreach.hpp>
 #define foreach BOOST_FOREACH
 
-//#define q4a 1
+#define q4a 1
 //#define q4b 1
-#define q4cd_extra 1
+//#define q4cd_extra 1
 
 double DH_param[4][5] = {{0.033, 0.155, 0.135, 0.0, 0.0}, {M_PI_2, 0.0, 0.0, M_PI_2, 0.0}, {0.147, 0.0, 0.0, 0.0, 0.183},
                          {170*M_PI/180, 65*M_PI/180+M_PI_2, -146*M_PI/180, M_PI_2+102.5*M_PI/180, M_PI+167.5*M_PI/180}};
@@ -23,7 +23,6 @@ geometry_msgs::Point gaz_point;
 void update_line(const gazebo_msgs::LinkStates::ConstPtr &pos)
 {
     int L = pos->pose.size();
-    pos->pose.back().position.x;
 
     gaz_point.x = 0.5*(pos->pose.at(L - 1).position.x + pos->pose.at(L - 2).position.x);
     gaz_point.y = 0.5*(pos->pose.at(L - 1).position.y + pos->pose.at(L - 2).position.y);
@@ -47,7 +46,7 @@ Eigen::Matrix4d fkine(double theta[])
     Eigen::Matrix4d T;
     T.setIdentity();
     for (int i = 0; i < 5; i++)
-        T = T*DH_mat(DH_param[0][i], DH_param[1][i], DH_param[2][i], DH_param[3][i] + theta[i]);
+        T = T*DH_mat(DH_param[0][i], DH_param[1][i], DH_param[2][i], DH_param[3][i] - theta[i]);
     return T;
 }
 
@@ -59,8 +58,6 @@ int main( int argc, char** argv )
     ros::Subscriber traj_sub = n.subscribe<gazebo_msgs::LinkStates>("/gazebo/link_states", 10, update_line);
     ros::Rate r(30);
 
-    YoubotKDL youbot;
-    youbot.init();
     KDL::Frame current_pose;
 
     //Define points message
@@ -109,7 +106,7 @@ int main( int argc, char** argv )
 
             double input_j[5];
             for (int i = 0; i < 5; i++)
-                input_j[i] = s->position.at(i)*M_PI/180.0;
+               input_j[i] = s->position.at(i);
 
             Matrix4d T = fkine(input_j);
 
@@ -127,13 +124,13 @@ int main( int argc, char** argv )
 
     foreach(rosbag::MessageInstance const m, view)
     {
-        geometry_msgs::Transform::ConstPtr s = m.instantiate<geometry_msgs::Transform>();
+        geometry_msgs::TransformStamped::ConstPtr s = m.instantiate<geometry_msgs::TransformStamped>();
         if (s != NULL)
         {
             geometry_msgs::Point p;
-            p.x = s->translation.x;
-            p.y = s->translation.y;
-            p.z = s->translation.z;
+            p.x = s->transform.translation.x;
+            p.y = s->transform.translation.y;
+            p.z = s->transform.translation.z;
             points.points.push_back(p);
         }
 

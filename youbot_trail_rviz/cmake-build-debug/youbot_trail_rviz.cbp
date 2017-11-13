@@ -206,7 +206,7 @@
 				<Compiler>
 					<Add option="-DROS_PACKAGE_NAME=&quot;youbot_trail_rviz&quot;"/>
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add option="-DMY_BAG_PATH=&quot;/home/kpach/catkin_ws/src/youbot_stack/youbot_trail_rviz/bags/data_q4d.bag&quot;"/>
+					<Add option="-DMY_BAG_PATH=&quot;/home/kpach/catkin_ws/src/youbot_stack/youbot_trail_rviz/bags/data_q4a.bag&quot;"/>
 					<Add directory="/home/kpach/catkin_ws/src/compgx01_lab/inverse_kinematics/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
@@ -236,7 +236,7 @@
 				<Compiler>
 					<Add option="-DROS_PACKAGE_NAME=&quot;youbot_trail_rviz&quot;"/>
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add option="-DMY_BAG_PATH=&quot;/home/kpach/catkin_ws/src/youbot_stack/youbot_trail_rviz/bags/data_q4d.bag&quot;"/>
+					<Add option="-DMY_BAG_PATH=&quot;/home/kpach/catkin_ws/src/youbot_stack/youbot_trail_rviz/bags/data_q4a.bag&quot;"/>
 					<Add directory="/home/kpach/catkin_ws/src/compgx01_lab/inverse_kinematics/include"/>
 					<Add directory="/opt/ros/kinetic/include"/>
 					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
