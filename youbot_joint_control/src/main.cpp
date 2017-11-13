@@ -5,6 +5,7 @@
 #include <string>
 #include <map>
 #include <stdint.h>
+#include <stdio.h>
 
 #include "ros/ros.h"
 #include "std_msgs/Float32MultiArray.h"
