@@ -21,7 +21,7 @@ void update_line(const gazebo_msgs::LinkStates::ConstPtr &pos)
     gaz_point.y = 0.5*(pos->pose.at(L - 1).position.y + pos->pose.at(L - 2).position.y);
     gaz_point.z = 0.5*(pos->pose.at(L - 1).position.z + pos->pose.at(L - 2).position.z);
 
-    if (robot_trail.points.size() < 5000)
+    if (robot_trail.points.size() < 4000)
     {
         robot_trail.points.push_back(gaz_point);
     }
