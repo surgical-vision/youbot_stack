@@ -21,7 +21,16 @@ void update_line(const gazebo_msgs::LinkStates::ConstPtr &pos)
     gaz_point.y = 0.5*(pos->pose.at(L - 1).position.y + pos->pose.at(L - 2).position.y);
     gaz_point.z = 0.5*(pos->pose.at(L - 1).position.z + pos->pose.at(L - 2).position.z);
 
-    robot_trail.points.push_back(gaz_point);
+    if (robot_trail.points.size() < 5000)
+    {
+        robot_trail.points.push_back(gaz_point);
+    }
+    else
+    {
+        robot_trail.points.erase(robot_trail.points.begin());
+        robot_trail.points.push_back(gaz_point);
+    }
+
 }
 
 int main( int argc, char** argv )
@@ -56,7 +65,7 @@ int main( int argc, char** argv )
     points.scale.x = 0.01;
     points.scale.y = 0.01;
 
-    // Points are red
+    // Points are green
     points.color.g = 1.0f;
     points.color.a = 1.0;
 
@@ -64,7 +73,7 @@ int main( int argc, char** argv )
     robot_trail.scale.x = 0.005;
 
     // Robot trails are blue
-    robot_trail.color.b = 1.0f;
+    robot_trail.color.g = 1.0f;
     robot_trail.color.a = 1.0;
 
     rosbag::Bag bag;
