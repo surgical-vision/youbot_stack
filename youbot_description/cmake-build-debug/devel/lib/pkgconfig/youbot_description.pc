@@ -1,0 +1,8 @@
+prefix=/home/kpach/catkin_ws/src/youbot_stack/youbot_description/cmake-build-debug/devel
+
+Name: youbot_description
+Description: Description of youbot_description
+Version: 0.8.1
+Cflags: 
+Libs: -L/home/kpach/catkin_ws/src/youbot_stack/youbot_description/cmake-build-debug/devel/lib 
+Requires: 

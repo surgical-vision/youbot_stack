@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libgtest.so -o libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o  -L/home/kpach/catkin_ws/src/youbot_stack/youbot_description/cmake-build-debug/gtest/src -Wl,-rpath,/home/kpach/catkin_ws/src/youbot_stack/youbot_description/cmake-build-debug/gtest/src -lpthread 

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/kpach/catkin_ws/src/youbot_stack/youbot_description/cmake-build-debug/devel/setup.sh
