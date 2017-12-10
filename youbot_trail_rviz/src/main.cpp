@@ -42,7 +42,7 @@ void update_point()
             d = sqrt(pow(robot_trail.points.at(i).x - points.points.at(j).x, 2) +
                              pow(robot_trail.points.at(i).y - points.points.at(j).y, 2) +
                              pow(robot_trail.points.at(i).z - points.points.at(j).z, 2));
-            if (d < 0.018)
+            if (d < 0.02)
             {
                 reached_points.points.push_back(points.points.at(j));
                 points.points.erase(points.points.begin() + j);
